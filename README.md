@@ -1,2 +1,2 @@
 # nostorm
-Fichiers sources de NosTorm un fork d'OpenNos.
+Fichiers sources de NosTorm developpé par Rayshon.
