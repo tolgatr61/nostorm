@@ -1,0 +1,56 @@
+<Definition>
+	<Globals>
+		<Id Value="2" />
+		<Label Value="Dark Castra" />
+		<LevelMinimum Value="40" />
+		<LevelMaximum Value="200" />
+		<StartX Value="21" />
+		<StartY Value="59" />
+		<RequiredItems>
+			<Item VNum="1129" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="2" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="2250" />
+		<FamExp Value="250" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="2502">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="285" HasDelay="30" PositionX="21" PositionY="12" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />
+				</OnDeath>
+			</SummonMonster>
+			<SummonMonster VNum="71" PositionX="9" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="11" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="13" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="14" PositionY="54" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="15" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="17" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="19" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="20" PositionY="54" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="22" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="24" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="25" PositionY="54" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="27" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="29" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="32" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="71" PositionX="34" PositionY="56" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="850" PositionX="20" PositionY="45" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="850" PositionX="17" PositionY="41" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="294" PositionX="25" PositionY="15" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="294" PositionX="23" PositionY="15" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="294" PositionX="21" PositionY="15" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="294" PositionX="19" PositionY="15" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+			<SummonMonster VNum="294" PositionX="17" PositionY="15" IsTarget="false" IsHostile="true" IsBoss="false" Move="true" />
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

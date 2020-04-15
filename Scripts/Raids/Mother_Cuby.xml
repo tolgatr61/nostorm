@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Author: OpenNos Team
+	Mother Cuby Version 1.1
+	Made specially for OpenNos Emulator Project
+	Linearize this XML Script for additional performance
+-->
+<Definition>
+	<Globals>
+		<Id Value="0" />
+		<Label Value="Mother Cuby" />
+		<LevelMinimum Value="40" />
+		<LevelMaximum Value="99" />
+		<StartX Value="77" />
+		<StartY Value="167" />
+		<RequiredItems>
+			<Item Amount="1" VNum="1127" />
+		</RequiredItems>
+		<GiftItems>
+			<Item Amount="1" Design="0" IsRandomRare="true" VNum="302" />
+		</GiftItems>
+		<Reputation Value="1550" />
+        <FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>
+		<CreateMap Map="1" VNum="2512" IndexX="20" IndexY="35">
+			<GenerateClock Value="24000" />
+			<StartClock />
+			<OnMoveOnMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveOnMap>
+			<SummonMonster IsBoss="true" PositionX="26" PositionY="28" VNum="282">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />								
+					<End Type="1" />
+					<ThrowItem VNum="1015" />
+					<ThrowItem PackAmount="2" VNum="2170" />										
+					<ThrowItem PackAmount="1" VNum="1127" />
+					<ThrowItem MaxAmount="9250" MinAmount="5720" PackAmount="30" VNum="1046" />
+					<ThrowItem MaxAmount="10" MinAmount="5" PackAmount="3" VNum="9009" />
+					<ThrowItem MaxAmount="5" MinAmount="2" PackAmount="3" VNum="1013" />										
+				</OnDeath>
+			</SummonMonster>
+			</CreateMap>
+	</InstanceEvents>
+</Definition>

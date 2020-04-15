@@ -1,0 +1,35 @@
+<Definition>
+	<Globals>
+		<Id Value="14" />
+		<Label Value="Valakus" />
+		<LevelMinimum Value="75" />
+		<LevelMaximum Value="99" />
+		<StartX Value="11" />
+		<StartY Value="29" />
+		<RequiredItems>
+			<Item VNum="5921" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="14" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="1500" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="218">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="1044" HasDelay="1" PositionX="24" PositionY="22" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />									
+					<ThrowItem MaxAmount="75000" MinAmount="75000" PackAmount="30" VNum="1046" />	
+				</OnDeath>
+			</SummonMonster>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

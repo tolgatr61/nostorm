@@ -1,0 +1,35 @@
+<Definition>
+	<Globals>
+		<Id Value="3" />
+		<Label Value="blackspider" />
+		<LevelMinimum Value="50" />
+		<LevelMaximum Value="99" />
+		<StartX Value="11" />
+		<StartY Value="16" />
+		<RequiredItems>
+			<Item VNum="1226" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="6" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="500" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="2532">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="289" HasDelay="1" PositionX="33" PositionY="36" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />									
+					<ThrowItem MaxAmount="12000" MinAmount="8000" PackAmount="30" VNum="1046" />	
+				</OnDeath>
+			</SummonMonster>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

@@ -1,0 +1,35 @@
+<Definition>
+	<Globals>
+		<Id Value="6" />
+		<Label Value="Namaju" />
+		<LevelMinimum Value="50" />
+		<LevelMaximum Value="99" />
+		<StartX Value="17" />
+		<StartY Value="32" />
+		<RequiredItems>
+			<Item VNum="1226" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="6" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="500" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="2566">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="414" HasDelay="1" PositionX="17" PositionY="17" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />									
+					<ThrowItem MaxAmount="9250" MinAmount="7500" PackAmount="30" VNum="1046" />	
+				</OnDeath>
+			</SummonMonster>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

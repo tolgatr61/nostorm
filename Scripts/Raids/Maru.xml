@@ -1,0 +1,35 @@
+<Definition>
+	<Globals>
+		<Id Value="19" />
+		<Label Value="Maru" />
+		<LevelMinimum Value="20" />
+		<LevelMaximum Value="99" />
+		<StartX Value="30" />
+		<StartY Value="10" />
+		<RequiredItems>
+			<Item VNum="5970" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="19" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="5000" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="2506">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="2316" HasDelay="1" PositionX="23" PositionY="33" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />									
+					<ThrowItem MaxAmount="25000" MinAmount="25000" PackAmount="30" VNum="1046" />	
+				</OnDeath>
+			</SummonMonster>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definition> 
+  <Globals>
+    <Id Value="1" />
+    <Label Value="Raid Ginseng" />
+    <LevelMinimum Value="40"/>
+    <LevelMaximum Value="59"/>
+    <StartX Value="24" />
+    <StartY Value="180" />
+    <RequieredItems>
+      <Item VNum="1128" Amount="1"/>
+    </RequieredItems>
+	<GiftItems>
+        <Item Amount="1" VNum="302" Design="1" IsRandomRare="true"/>
+    </GiftItems>
+	<Reputation Value="2250" />
+    <FamExp Value="220" />
+  </Globals>
+  <InstanceEvents>
+  <CreateMap Map="1" VNum="2522" IndexX="30" IndexY="58">
+        <SetMonsterLockers Value="7" />
+        <SetButtonLockers Value="0" />
+        <RefreshRaidGoals/>
+	  <SummonMonster VNum="291" PositionX="16" PositionY="20" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+	  </SummonMonster>
+		<SummonMonster VNum="291" PositionX="20" PositionY="15" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+		</SummonMonster>
+		<SummonMonster VNum="291" PositionX="26" PositionY="15" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+		</SummonMonster>
+		<SummonMonster VNum="291" PositionX="32" PositionY="15" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+		</SummonMonster>
+		<SummonMonster VNum="291" PositionX="38" PositionY="15" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+		</SummonMonster>
+		<SummonMonster VNum="291" PositionX="42" PositionY="20" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+		</SummonMonster>
+		<SummonMonster VNum="291" PositionX="29" PositionY="20" IsTarget="true">
+        <OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+        </OnDeath>
+		</SummonMonster>
+	 <OnLockerOpen>
+	  <SetMonsterLockers Value="1"/>
+	  <SetButtonLockers Value="0"/>
+	  <RefreshRaidGoals/>
+	<SummonMonster VNum="284" PositionX="31" PositionY="37" IsBoss="true">	
+	<OnDeath>
+          <RemoveMonsterLocker/>
+          <RefreshRaidGoals/>
+          <End Type="1"/>
+          <ThrowItem VNum="1015"/>
+          <ThrowItem VNum="2136"/>
+          <ThrowItem VNum="2170" PackAmount="2"/>
+          <ThrowItem VNum="1011"/>
+          <ThrowItem VNum="2043"/>
+          <ThrowItem VNum="2035"/>
+          <ThrowItem VNum="2044"/>
+          <ThrowItem VNum="2127" PackAmount="2"/>
+          <ThrowItem VNum="2048" PackAmount="2"/>
+          <ThrowItem VNum="1046" PackAmount="30" MinAmount="1000" MaxAmount="2000"/>
+        </OnDeath>
+	</SummonMonster>
+</OnLockerOpen>
+	</CreateMap>
+  </InstanceEvents>
+</Definition>

@@ -1,0 +1,35 @@
+<Definition>
+	<Globals>
+		<Id Value="10" />
+		<Label Value="Jacko" />
+		<LevelMinimum Value="20" />
+		<LevelMaximum Value="99" />
+		<StartX Value="57" />
+		<StartY Value="78" />
+		<RequiredItems>
+			<Item VNum="1916" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="10" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="500" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="2583">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="1381" HasDelay="1" PositionX="58" PositionY="56" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />									
+					<ThrowItem MaxAmount="5000" MinAmount="5000" PackAmount="30" VNum="1046" />	
+				</OnDeath>
+			</SummonMonster>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

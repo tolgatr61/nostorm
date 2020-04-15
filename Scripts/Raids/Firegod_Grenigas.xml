@@ -1,0 +1,35 @@
+<Definition>
+	<Globals>
+		<Id Value="15" />
+		<Label Value="Firegod_Grenigas" />
+		<LevelMinimum Value="75" />
+		<LevelMaximum Value="99" />
+		<StartX Value="43" />
+		<StartY Value="6" />
+		<RequiredItems>
+			<Item VNum="5920" Amount="1" />
+		</RequiredItems>
+		<GiftItems>
+       	   <Item Amount="1" VNum="302" Design="13" IsRandomRare="true"/>
+		</GiftItems>
+		<Reputation Value="5000" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>		
+		<CreateMap Map="1" VNum="2539">
+			<OnMoveMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveMap>
+			<SummonMonster VNum="1058" HasDelay="1" PositionX="43" PositionY="60" IsBoss="true">
+				<OnDeath>
+					<RemoveMonsterLocker />
+					<RefreshRaidGoals />
+					<End Type="1" />									
+					<ThrowItem MaxAmount="50000" MinAmount="50000" PackAmount="30" VNum="1046" />	
+				</OnDeath>
+			</SummonMonster>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

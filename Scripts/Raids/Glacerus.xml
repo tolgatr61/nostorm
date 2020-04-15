@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definition>
+	<Globals>
+		<Id Value="17" />
+		<Label Value="Glacerus el frío" />
+		<DailyEntries Value="5" />
+		<LevelMinimum Value="80" />
+		<LevelMaximum Value="99" />
+		<StartX Value="12" />
+		<StartY Value="38" />
+		<RequiredItems>
+			<Item Amount="1" VNum="5512" />
+		</RequiredItems>
+		<GiftItems>
+			<Item Amount="1" Design="17" IsRandomRare="true" VNum="302" />
+			<Item Amount="1" VNum="2523" />
+		</GiftItems>
+		<Reputation Value="2250" />
+		<FamExp Value="200" />
+	</Globals>
+	<InstanceEvents>
+		<CreateMap Map="0" VNum="2588" IndexX="12" IndexY="38">
+			<OnCharacterDiscoveringMap>
+                <GenerateClock Value="9000" />
+                <StartClock>
+                    <OnTimeout>
+                        <End Type="2"/>
+                    </OnTimeout>
+                </StartClock>
+                <SetMonsterLockers Value="0" />
+                <SetButtonLockers Value="1" />
+            </OnCharacterDiscoveringMap>
+			<SpawnButton Id="0" PositionX="13" PositionY="22" VNumDisabled="1135" VNumEnabled="1136">
+				<OnFirstEnable>
+					<RemoveButtonLocker />
+					<RefreshRaidGoals />
+				</OnFirstEnable>
+			</SpawnButton>
+			<OnLockerOpen>
+				<ChangePortalType IdOnMap="0" Type="2" />
+				<RefreshMapItems />
+				<SendMessage Type="0" Value="The door has been opened!" />
+			</OnLockerOpen>
+			<SpawnPortal IdOnMap="0" PositionX="12" PositionY="7" ToMap="1" ToX="30" ToY="46" Type="1" />
+		</CreateMap>
+		<CreateMap Map="1" VNum="2589" IndexX="30" IndexY="46">
+			<OnCharacterDiscoveringMap>
+    	  	  	<SetMonsterLockers Value="1" />
+    	  	  	<SetButtonLockers Value="0" />
+    	  	  	<RefreshRaidGoals/>
+    	  	  	<!-- Npcs -->
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="40" PositionY="36" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="35" PositionY="39" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="31" PositionY="35" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="31" PositionY="37" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="33" PositionY="36" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="27" PositionY="37" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="33" PositionY="37" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="25" PositionY="38" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="38" PositionY="37" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2102" PositionX="37" PositionY="34" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2101" PositionX="33" PositionY="40" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2101" PositionX="41" PositionY="35" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2101" PositionX="22" PositionY="36" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2101" PositionX="36" PositionY="40" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2101" PositionX="29" PositionY="35" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="19" PositionY="40" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="22" PositionY="34" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="29" PositionY="38" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="34" PositionY="40" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="30" PositionY="39" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="30" PositionY="34" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="24" PositionY="36" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+        		<SummonNpc IsHostile="true" Move="true" VNum="2100" PositionX="45" PositionY="36" >
+        			<Roam FirstX="33" FirstY="20" />
+        		</SummonNpc>
+    	  	</OnCharacterDiscoveringMap>		
+			<OnMoveOnMap>
+				<SetMonsterLockers Value="1" />
+				<SetButtonLockers Value="0" />
+				<RefreshRaidGoals />
+			</OnMoveOnMap>
+			<SummonMonster VNum="2049" IsHostile="true" Move="true" PositionX="33" PositionY="23" IsBoss="true">
+				<OnDeath>
+    	  	  	  	<RemoveMonsterLocker/>
+    	  	  	  	<RefreshRaidGoals/>
+    	  	  	  	<End Type="1"/>
+    	  	  	  	<ThrowItem Delay="6" VNum="1046" PackAmount="30" MinAmount="120000" MaxAmount="150000"/>
+					<ThrowItem VNum="1363" PackAmount="4" Amount="1" />
+					<ThrowItem VNum="1364" PackAmount="4" Amount="1" />
+    	  	  	</OnDeath>
+			</SummonMonster>
+			<OnMoveOnMap>
+				<Wave Delay="60" Offset="1">
+					<SendMessage Type="0" Value="¡Ha aparecido una oleada de enemigos!" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="11" PositionY="6" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="17" PositionY="18" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="22" PositionY="18" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="23" PositionY="11" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="23" PositionY="14" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="17" PositionY="17" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="27" PositionY="13" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="32" PositionY="16" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="34" PositionY="10" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="37" PositionY="16" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="38" PositionY="11" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="41" PositionY="18" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="44" PositionY="13" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="47" PositionY="19" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="42" PositionY="22" VNum="2046" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="19" PositionY="33" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="21" PositionY="30" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="22" PositionY="36" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="25" PositionY="33" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="30" PositionY="33" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="35" PositionY="33" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="35" PositionY="38" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="41" PositionY="35" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="44" PositionY="31" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="41" PositionY="23" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="41" PositionY="27" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="26" PositionY="24" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="25" PositionY="30" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="27" PositionY="35" VNum="2047" />
+					<SummonMonster IsHostile="true" Move="true" PositionX="34" PositionY="37" VNum="2047" />
+				</Wave>				
+			</OnMoveOnMap>
+		</CreateMap>
+	</InstanceEvents>
+</Definition>

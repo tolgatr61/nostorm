@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definition>
+  <Globals>
+    <Id Value="0" />
+    <Label Value="Belial Raid" />
+    <LevelMinimum Value="90"/>
+    <LevelMaximum Value="99"/>
+    <StartX Value="61" />
+    <StartY Value="33" />
+	<Reputation Value="1500" />
+    <RequieredItems>
+      <Item VNum="5786" Amount="1"/>
+    </RequieredItems>
+    <GiftItems>
+        <Item Amount="1" VNum="4463" Design="0" IsRandomRare="True"/>
+    </GiftItems>
+  </Globals>
+  <InstanceEvents>
+		<CreateMap Map="0" VNum="2643">
+			<SetMonsterLockers Value="1" />
+			<SetButtonLockers Value="0" />
+			<RefreshRaidGoals/>
+		  <SummonMonster VNum="3029" PositionX="12" PositionY="33" IsBoss="True">
+			<OnDeath>
+			  <RemoveMonsterLocker/>
+			  <RefreshRaidGoals/>
+			  <End Type="1"/>
+			  <ThrowItem VNum="2411" PackAmount="10" MinAmount="2" MaxAmount="2"/>
+			  <ThrowItem VNum="2406" PackAmount="5"/>
+			  <ThrowItem VNum="2459" PackAmount="5"/>
+			  <ThrowItem VNum="2366" PackAmount="5"/>
+			  <ThrowItem VNum="2410" PackAmount="2"/>
+			  <ThrowItem VNum="2416" PackAmount="3"/>
+			  <ThrowItem VNum="2408" PackAmount="3"/>
+			  <ThrowItem VNum="2460" PackAmount="10" MinAmount="2" MaxAmount="2"/>
+			  <ThrowItem VNum="1046" PackAmount="30" MinAmount="15000" MaxAmount="40000"/>
+			</OnDeath>
+		  </SummonMonster>
+			<Wave Offset="1" Delay="30">
+			  <SendMessage Value="Enemies has arrived !" Type="0"/>
+			  <SummonMonster VNum="3024" PositionX="30" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3024" PositionX="30" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3024" PositionX="30" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3024" PositionX="30" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3024" PositionX="30" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3025" PositionX="32" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3025" PositionX="32" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3025" PositionX="32" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3025" PositionX="32" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3025" PositionX="32" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3026" PositionX="33" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3026" PositionX="33" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3026" PositionX="33" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3026" PositionX="33" PositionY="33">
+
+			  </SummonMonster>
+			  <SummonMonster VNum="3026" PositionX="33" PositionY="33">
+
+			  </SummonMonster>
+			  
+			</Wave>
+			
+		</CreateMap>
+	</InstanceEvents>
+</Definition>
