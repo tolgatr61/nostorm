@@ -1,2 +1,2 @@
 # nostorm
-Fichiers sources de NosTorm developpé par Rayshon.
+Fichiers sources de NosTorm (fork d'OpenNos), avec des Scripts de Raid au format XML et une BDD customisé version PvP fourni.
